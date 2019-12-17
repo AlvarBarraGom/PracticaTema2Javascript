@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Práctica Factura Javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='facturas.css'>
+</head>
+ 
+<body>
+    <div>
+        <h3>INTRODUCIR PRODUCTOS EN LA FACTURA</h3>
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" />
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="0" />
+        <label for="precio-unitario">Precio unitario:</label>
+        <input type="number" id="precio-unitario" value="0" />
+        <button id="agregar"type="button" class="btn btn-primary">Agregar</button>
+    </div>
+ 
+ 
+    <table rules="groups" class="container">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio unitario</th>
+                <th>Precio total</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Base imponible</th>
+                <th><span id="base-imponible">0</span>€</th>
+            </tr>
+            <tr>
+                <th colspan="3" data-iva="0.21">IVA 21%</th>
+                <th><span id="iva">0</span>€</th>
+            </tr>
+            <tr>
+                <th colspan="3">Total factura</th>
+                <th><span id="total">0</span>€</th>
+            </tr>
+            <tr>
+                <th colspan="3">Hora</th>
+                <th><span id="hora">00:00:00</span></th>
+            </tr>
+           
+        </tfoot>
+        
+    </table>
+
+    <p><span id="fecha"></span></p>>
+
+    <script src='facturas.js'></script>
+</body>
+ 
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
