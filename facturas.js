@@ -16,23 +16,23 @@ let añadirAlSiguiente = 0;
 let ivaAlSiguiente = 0;
 let totalFacturaAlSiguiente = 0;
 
-//Variable Fecha a día de hoy que se colocará debajo de la tabla.
+//Variable Fecha a día de hoy, que se colocará debajo de la tabla.
 
 let fecha = new Date();
 
     fechaHoy = document.getElementById("fecha").innerHTML = +fecha.getDate()+"/"+(fecha.getMonth()+1)+"/"+fecha.getFullYear();
 
-//Función Agregar Línea donde irá incluída la información de la tabla y los correspondientes calculos de la factura.
+//Función Agregar Línea, donde irá incluída la información de la tabla y los correspondientes cálculos de la factura.
 
 let agregarLinea = function () {
 
-//Inicialización Variables de introducción de valores del imput
+//Inicialización Variables de introducción de valores del imput.
 
     let producto = document.getElementById("producto").value;
     let cantidad = document.getElementById("cantidad").value;
     let precioUnitario = document.getElementById("precio-unitario").value;
 
-//Calculo Base Imponible, donde añade variable *añadirAlSiguiente* que permite que no se pise el valor anterior.
+//Cálculo del precio total, donde añade variable *añadirAlSiguiente* que permite que no se pise el valor anterior.
 
     precioTotal = precioUnitario * cantidad;
     añadirAlSiguiente += precioTotal;
